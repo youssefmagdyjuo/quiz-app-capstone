@@ -8,6 +8,7 @@
     --primary-color: #1E9D75;
     --secondary-color: #B4FF63;
     --background-color: #1E1E1E;
+    --gray:#444;
     --text-color: #FFFFFF;
     --font-family: 'Poppins', sans-serif;
 }
@@ -23,7 +24,10 @@ body {
     padding: 0;
     box-sizing: border-box;
 }
-
+.container{
+    max-width: 50rem;
+    width: 90%;
+}
 a {
     text-decoration: none;
 }
@@ -66,7 +70,18 @@ li {
     justify-content: center;
     align-items: center;
 }
-
+.btnNav{
+    background: var(--gray);
+    border: none;
+    color: white;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border-radius: 10rem;
+    border: 1px solid ;
+    
+}
 .button {
     border-radius: 10rem;
     color: white;
@@ -78,7 +93,6 @@ li {
     border-radius: 10rem;
     cursor: pointer;
 
-
 }
 
 .primaryButton {
@@ -86,7 +100,7 @@ li {
 }
 
 .secondaryButton {
-    background: #444;
+    background: var(--gray);
 }
 
 .headerContainer {
@@ -236,8 +250,96 @@ li {
 .desplay {
     display: flex;
 }
+/* =====================QuestionCard============== */
+.uperTitle{
+    color: #888;
+}
+.questionContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    /* background-color: red; */
+    margin: 2rem auto 0;
+    padding: 1rem;
+}
 
+.questionBox{
+    background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    width: 100%;
+    padding: 2px;
+    border-radius: 10rem;
+    box-shadow: 0px 4px 10px rgba(228, 228, 228, 0.144);
+}
+.questionText{
+    place-content: center;
+    text-align: center;
+    font-weight: 600;
+    color: #ddd;
+    background-color: var(--background-color);
+    width: 100%;
+    padding: 1.5rem;
+    border-radius: 10rem;
+}
+.optionsContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    /* background-color: blueviolet; */
+    width: 80%;
+}
+.optionsContainer .option{
+    width: 100%;
+    display: grid;
+    grid-template-columns: 0.1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    box-shadow: 0px 3px 5px rgba(228, 228, 228, 0.091);
+    padding: 0.5rem 0.8rem;
+    border-radius: 10rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    border: 1px solid var(--gray);
+}
+.optionsContainer .option span{
+    background-color: var(--gray);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+} 
+.moveBar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .header_1 {
+        font-size: 3.5rem;
+    }
+
+    .header_2 {
+        font-size: 1.8rem;
+    }
+
+    
+}
 @media (max-width: 600px) {
+    .container{
+        max-width: 100%;
+        width: 100%;
+    }
     .header_1 {
         font-size: 2.5rem;
     }
@@ -258,11 +360,14 @@ li {
     }
 
     .buttonContainer {
-        width: 7rem;
+        width: 7.6rem;
         height: 2.5rem;
     }
 
     .button {
         font-size: 0.8rem;
+    }
+    .optionsContainer{
+        width: 100%;
     }
 }
