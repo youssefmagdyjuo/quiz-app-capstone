@@ -4,7 +4,7 @@ import mockQuestions from "../services/mockQuestions";
 import { fetchQuestions } from '../services/QuestionsService'
 import { useEffect } from 'react'
 import { useQuestionStore } from '../store/Q_Store'
-export default function QuestionsPage() {
+export default function Quiz() {
     // Access questions and setQuestions from the Zustand store
     const {questions, setQuestions } = useQuestionStore();
     // Fetch questions by fetchQuestions function from QuestionsService and set them in the store

@@ -2,10 +2,18 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 // Form Store
-export const useOpenForm = create((set) => ({
+export const useOpenForm = create(
+    persist(
+        (set) => ({
     isVisible: false,
     toggleVisible: () => set((state) => ({ isVisible: !state.isVisible })),
-}));
+    category: null,
+    setCategory: (newCategory) => set(() => ({ category: newCategory })),
+    difficulty: null,
+    setDifficulty: (newDifficulty) => set(() => ({ difficulty: newDifficulty })),
+}),        { name: "form-storage" }
+    )
+);
 
 // Question Store
 export const useQuestionStore = create(

@@ -5,7 +5,7 @@ import Button from "../components/Button";
 import Form from "../components/Form";
 import { useOpenForm } from "../store/Q_Store";
 export default function Home() {
-    const {isVaisble,toggleVisible} = useOpenForm();
+    const {isVisible,toggleVisible} = useOpenForm();
     return (
 <>
         <div className="headerContainer">
@@ -14,7 +14,7 @@ export default function Home() {
             <h1 className="header_1">Chase the Challenge</h1>
             <p>Challenge yourself with fun and engaging quizzes that make learning exciting and rewarding  </p>
             <Button buttomFunc={toggleVisible} buttonStyle='primaryButton' buttonText="Try Now"/>
-            <Form isVaisble={isVaisble}/>
+            <Form isVisible={isVisible}/>
         </div>
 </>
     );

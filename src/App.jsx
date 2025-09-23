@@ -1,14 +1,17 @@
 import './App.css'
-import Select from './components/select'
 import Home from './pages/Home'
-import QuestionsPage from './pages/QuestionsPage'
-
+import Quiz from './pages/Quiz'
+import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 function App() {
 
   return (
     <>
-    {/* <Home /> */}
-    <QuestionsPage />
+    <Router>
+      <Routes>
+        <Route path='/' element={<Home/>}/>
+        <Route path='/quiz' element={<Quiz/>}/>
+      </Routes>
+    </Router>
     </>
   )
 }

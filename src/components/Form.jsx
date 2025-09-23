@@ -2,11 +2,37 @@ import React from 'react'
 import Select from './select';
 import Button from './Button';
 import { useOpenForm } from '../store/Q_Store';
-export default function Form({isVaisble}) {
-    const options = ["Sports", "History", "Politics", "Geography", "Animals"];
-    const options2 = ["Easy", "Medium", "Hard"];
-    const styles = `formContainerPage ${isVaisble ? 'desplay' : ''}`;
-    const {toggleVisible} = useOpenForm();
+import { Link } from 'react-router-dom';
+import {categories , difficultyLevels} from '../services/QuestionsService';
+import { fetchQuestions } from '../services/QuestionsService'
+import { useQuestionStore } from '../store/Q_Store'
+export default function Form({isVisible}) {
+    const styles = `formContainerPage ${isVisible ? 'desplay' : ''}`;
+    const {toggleVisible,difficulty,category} = useOpenForm();
+    const {setQuestions} = useQuestionStore();
+    // Fetch questions by fetchQuestions function from QuestionsService and set them in the store
+        async function loadQuestions() {
+            try {
+                const data = await fetchQuestions(category,difficulty);
+                // Add a status field to each question
+                const formattedQuestions = data.results.map((question) => ({
+                    ...question,
+                    status: 'unanswered',
+                    userAnswer: null
+                }));
+                // Update the store with the formatted questions
+                setQuestions(formattedQuestions);
+                useQuestionStore.setState({
+                currentQuestion: formattedQuestions[0] || null,
+                currentQuestionIndex: 0
+                });
+            } catch (error) {
+                console.error("Failed to fetch questions:", error);
+            }
+        }
+        
+
+
     return (
         <div className={styles}
         onClick={(e) => {
@@ -18,9 +44,19 @@ export default function Form({isVaisble}) {
             <div className='form_container'>
             <div className='form' action="">
                 <h1>Quiz type</h1>
-                <Select options={options} title="Choose Category"/>
-                <Select options={options2} title="Level"/>
-                <Button buttonStyle='primaryButton' buttonText='Start Quiz'/>
+                <Select options={categories} title="Category"/>
+                <Select options={difficultyLevels} title="Difficulty"/>
+                <Link to='/quiz'>
+                    <Button  
+                    buttonStyle='primaryButton' 
+                    buttonText='Start Quiz' 
+                    buttomFunc={()=>{
+                        // call function to fetch questions
+                        loadQuestions()
+                        // close the form
+                        toggleVisible()
+                        }}/>
+                </Link>
             </div>
         </div>
         </div>

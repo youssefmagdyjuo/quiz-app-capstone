@@ -1,10 +1,9 @@
 import React, { useState } from "react";
-
+import { useOpenForm } from "../store/Q_Store";
 export default function Select({options,title}) {
     const [isOpen, setIsOpen] = useState(false);
     const [selected, setSelected] = useState(title);
-
-
+    const {setCategory,setDifficulty} = useOpenForm();
     return (
         <div className="dropdown">
             <button
@@ -14,19 +13,22 @@ export default function Select({options,title}) {
                 <span className="selected">
                     {selected}
                     <span>▼</span>
-                    </span>
+                </span>
             </button>
             {isOpen && (
                 <ul className="dropdown-content">
-                    {options.map((option, index) => (
+                    {options.map((option) => (
                         <li
-                            key={index}
+                            key={option.id}
                             onClick={() => {
-                                setSelected(option);
+                                setSelected(option.name);
+                                // set the category or difficulty in the store for use in fetching questions
+                                if(title === "Category") setCategory(option.id);
+                                if(title === "Difficulty") setDifficulty(option.name.toLowerCase());
                                 setIsOpen(false);
                             }}
                         >
-                            {option}
+                            {option.name}
                         </li>
                     ))}
                 </ul>
