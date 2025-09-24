@@ -95,7 +95,8 @@ export default function QuestionCard() {
             </div>
             {/* move bar */}
             <div className="moveBar">
-                <button 
+                <div class='flex justify-between w-100 gap-1'>
+                    <button 
                     onClick={()=>{
                     setCurrentQuestionIndex(0);
                 }}
@@ -103,19 +104,25 @@ export default function QuestionCard() {
                 <Button 
                 buttomFunc={decrementIndex} 
                 buttonStyle='secondaryButton' 
-                buttonText='< previous'
+                buttonText='< Previous'
                 />
-                <div>{`${currentQuestionIndex+1}/${questions.length}`}</div>
-                <Button 
-                buttomFunc={incrementIndex} 
-                buttonStyle='praimryButton' 
-                buttonText='next >'
-                />
-                <button 
-                onClick={()=>{
-                    setCurrentQuestionIndex(questions.length - 1);
-                }}
-                className='btnNav'>{">>"}</button>
+                </div>
+                {/* Question Number  */}
+                <div className="questionNumber_Container">
+                    <div className='questionNumber'>{`${currentQuestionIndex+1}/${questions.length}`}</div>
+                </div>
+                <div class='flex justify-between w-100 gap-1'>
+                    <Button 
+                    buttomFunc={incrementIndex} 
+                    buttonStyle='praimryButton' 
+                    buttonText='Next >'
+                    />
+                    <button 
+                    onClick={()=>{
+                        setCurrentQuestionIndex(questions.length - 1);
+                    }}
+                    className='btnNav'>{">>"}</button>
+                </div>
             </div>
         </div>
         </div>
