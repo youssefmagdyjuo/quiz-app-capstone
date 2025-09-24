@@ -69,7 +69,7 @@ export default function QuestionCard() {
             </div>
             {/* move bar */}
             <div className="moveBar">
-                <div className='flex justify-between w-100 gap-1'>
+                <div className='moveButtons'>
                     <button 
                     onClick={()=>{
                     setCurrentQuestionIndex(0);
@@ -85,7 +85,7 @@ export default function QuestionCard() {
                 <div className="questionNumber_Container">
                     <div className='questionNumber'>{`${currentQuestionIndex+1}/${questions.length}`}</div>
                 </div>
-                <div className='flex justify-between w-100 gap-1'>
+                <div className='moveButtons'>
                     <Button 
                     buttomFunc={incrementIndex} 
                     buttonStyle='praimryButton' 

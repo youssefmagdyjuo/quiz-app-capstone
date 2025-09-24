@@ -10,11 +10,10 @@
     --background-color: #1b1b1b;
     --gray:#444;
     --text-color: #FFFFFF;
-    --font-family: 'Poppins', sans-serif;
 }
 
 body {
-    font-family: 'Poppins', sans-serif;
+    font-family: 'Poppins' sans-serif;
     background-color: var(--background-color);
     color: #FFFFFF;
 }
@@ -130,7 +129,7 @@ li {
 
 .headerContainer p {
     color: #AAA;
-    max-width: 500px;
+    max-width: 30rem;
     margin-bottom: 1rem;
 }
 
@@ -259,9 +258,8 @@ li {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    gap: 3rem;
-    /* background-color: red; */
-    margin: 2rem auto 0;
+    gap: 2rem;
+    margin: auto 0;
     padding: 1rem;
 }
 
@@ -320,6 +318,7 @@ li {
     align-items: center;
     gap: 1rem;
     width: 100%;
+    /* background-color: violet; */
 }
 .moveBar .questionNumber_Container{
     background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
@@ -343,7 +342,12 @@ li {
     align-items: center;
     font-weight: 600;
 }
-
+.moveButtons{
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
 
 @media screen and (max-width: 800px) {
     .header_1 {
@@ -353,7 +357,9 @@ li {
     .header_2 {
         font-size: 1.8rem;
     }
-
+    .headerContainer p {
+        max-width: 23rem;
+    }
     
 }
 @media (max-width: 600px) {
@@ -368,10 +374,11 @@ li {
     .header_2 {
         font-size: 1.5rem;
     }
-
+    .headerContainer p {
+        max-width: 21rem;
+    }
     .navBar_container {
         max-width: 100%;
-        height: 2.5rem;
         margin-bottom: 3rem;
     }
 
