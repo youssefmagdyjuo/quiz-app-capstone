@@ -25,7 +25,7 @@ export default function Form({isVisible}) {
                 const formattedQuestions = data.results.map((question) => ({
                     ...question,
                     status: 'unanswered',
-                    userAnswer: null
+                    userAnswer: 'No Answer'
                 }));
                 // Update the store with the formatted questions
                 setQuestions(formattedQuestions);

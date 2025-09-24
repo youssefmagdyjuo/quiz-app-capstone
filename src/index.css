@@ -8,6 +8,7 @@
     --primary-color: #1E9D75;
     --secondary-color: #B4FF63;
     --background-color: #1b1b1b;
+    --dengar:#9D1E1E;
     --gray:#444;
     --text-color: #FFFFFF;
 }
@@ -259,7 +260,7 @@ li {
     justify-content: center;
     align-items: center;
     gap: 2rem;
-    margin: auto 0;
+    margin: 0 auto ;
     padding: 1rem;
 }
 
@@ -348,7 +349,36 @@ li {
     justify-content: space-between;
     width: 100%;
 }
-
+/* ================Resulte page================= */
+.AnswersReview_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin: 0 auto;
+    width: 90%;
+    max-width: 75rem;
+}
+.questionReview_container{
+    /* background: linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%); */
+    width: 100%;
+    height: fit-content;
+    padding: 2px;
+    border-radius: 1rem;
+    box-shadow: 0px 4px 10px rgba(228, 228, 228, 0.144);
+}
+.questionReview{
+    place-content: center;
+    text-align: start;
+    font-weight: 600;
+    color: #ddd;
+    background-color: var(--background-color);
+    width: 100%;
+    padding: 1rem 1.5rem 1.5rem 0;
+    border-radius: 1rem;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr;
+    row-gap: 1rem;
+}
 @media screen and (max-width: 800px) {
     .header_1 {
         font-size: 3.5rem;
@@ -360,7 +390,9 @@ li {
     .headerContainer p {
         max-width: 23rem;
     }
-    
+    .AnswersReview_container{
+        grid-template-columns: 1fr;
+    }
 }
 @media (max-width: 600px) {
     .container{

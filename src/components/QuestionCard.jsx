@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from './Button'
 import { useQuestionStore } from '../store/Q_Store'
+import { Link } from 'react-router-dom';
 export default function QuestionCard() {
     const {score,decrementScore,incrementScore,updateQuestionStatus,incrementIndex,decrementIndex,getCurrentQuestion,currentQuestionIndex,setCurrentQuestionIndex,questions} = useQuestionStore();
     if (!getCurrentQuestion()) {
@@ -86,11 +87,30 @@ export default function QuestionCard() {
                     <div className='questionNumber'>{`${currentQuestionIndex+1}/${questions.length}`}</div>
                 </div>
                 <div className='moveButtons'>
-                    <Button 
-                    buttomFunc={incrementIndex} 
-                    buttonStyle='praimryButton' 
-                    buttonText='Next >'
-                    />
+                    {
+                        currentQuestionIndex==questions.length - 1
+                        ?(
+                            <>
+                            <Link to={'/quiz/resulte'}>
+                                <Button 
+                                // buttomFunc={()=>{alert('finish')}} 
+                                buttonStyle='praimryButton' 
+                                buttonText='Finish'
+                                />
+                            </Link>
+                            </>
+                        ):(
+                            <>
+                                <Button 
+                                buttomFunc={incrementIndex} 
+                                buttonStyle='praimryButton' 
+                                buttonText='Next >'
+                                />
+                            </>
+                        )
+                    }
+
+
                     <button 
                     onClick={()=>{
                         setCurrentQuestionIndex(questions.length - 1);
