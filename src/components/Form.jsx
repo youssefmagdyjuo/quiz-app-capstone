@@ -1,12 +1,19 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Select from './select';
 import Button from './Button';
 import { useOpenForm } from '../store/Q_Store';
 import { Link } from 'react-router-dom';
-import {categories , difficultyLevels} from '../services/QuestionsService';
-import { fetchQuestions } from '../services/QuestionsService'
+import { fetchQuestions ,fetchCategories,difficultyLevels} from '../services/QuestionsService'
 import { useQuestionStore } from '../store/Q_Store'
 export default function Form({isVisible}) {
+    const [categories,setCategories]=useState([]);
+    useEffect(() => {
+    async function loadCategories() {
+        const data = await fetchCategories();
+        setCategories(data)
+    }
+    loadCategories();
+    }, []);
     const styles = `formContainerPage ${isVisible ? 'desplay' : ''}`;
     const {toggleVisible,difficulty,category} = useOpenForm();
     const {setQuestions} = useQuestionStore();

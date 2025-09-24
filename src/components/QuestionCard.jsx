@@ -32,32 +32,6 @@ export default function QuestionCard() {
                 incrementScore()
             }else updateQuestionStatus(currentQuestionIndex,'wrong',userAnswer)
         }
-            // console.log(`
-            //     User Answer : ${getCurrentQuestion().userAnswer}
-            //     Correct Answer : ${getCurrentQuestion().correct_answer}
-            //     Status Answer : ${getCurrentQuestion().status}
-            //     User Score : ${score}
-            //     `)
-
-                        // const allSpans = document.querySelectorAll('.optionsContainer .option span');
-                        // allSpans.forEach(span => {
-                        //     span.style.backgroundColor = '';
-                        //     span.style.color = '';
-                        // });
-                        // const span = event.currentTarget.querySelector('span');
-                        // if (span) {
-                        //     span.style.backgroundColor = '#4caf50';
-                        //     span.style.color = 'white';
-                        // }
-                        // const allOption = document.querySelectorAll('.option');
-                        // allOption.forEach(option => {
-                        //     option.style.border = 'solid 1px #444';
-                        //     option.style.color = '';
-                        // });
-                        // const option = event.currentTarget;
-                        // if (option) {
-                        //     option.style.border = 'solid 1px #4caf50';
-                        // }
                     }
                     console.log(score)
     return (
@@ -95,7 +69,7 @@ export default function QuestionCard() {
             </div>
             {/* move bar */}
             <div className="moveBar">
-                <div class='flex justify-between w-100 gap-1'>
+                <div className='flex justify-between w-100 gap-1'>
                     <button 
                     onClick={()=>{
                     setCurrentQuestionIndex(0);
@@ -111,7 +85,7 @@ export default function QuestionCard() {
                 <div className="questionNumber_Container">
                     <div className='questionNumber'>{`${currentQuestionIndex+1}/${questions.length}`}</div>
                 </div>
-                <div class='flex justify-between w-100 gap-1'>
+                <div className='flex justify-between w-100 gap-1'>
                     <Button 
                     buttomFunc={incrementIndex} 
                     buttonStyle='praimryButton' 
