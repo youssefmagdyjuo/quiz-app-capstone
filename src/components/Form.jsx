@@ -16,9 +16,10 @@ export default function Form({isVisible}) {
     }, []);
     const styles = `formContainerPage ${isVisible ? 'desplay' : ''}`;
     const {toggleVisible,difficulty,category} = useOpenForm();
-    const {setQuestions} = useQuestionStore();
+    const {setQuestions,resetScore} = useQuestionStore();
     // Fetch questions by fetchQuestions function from QuestionsService and set them in the store
         async function loadQuestions() {
+            resetScore()
             try {
                 const data = await fetchQuestions(category,difficulty);
                 // Add a status field to each question

@@ -8,7 +8,7 @@ export default function AnswersReview() {
         <div className='AnswersReview_container'>
             {
                 questions.map(q=>(
-                    <div className="questionReview_container" style={{background:q.status=='correct'?'linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%)':'#B91212'}}>
+                    <div className="questionReview_container" style={{background:q.status=='correct'?'linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%)':q.status=='wrong'?'var(--dengar)':'var(--gray)'}}>
                         <div className="questionReview">
                                 <div style={{textAlign:'center'}}>Q : </div>
                                 <div>
@@ -23,8 +23,8 @@ export default function AnswersReview() {
                                 q.status!='correct'
                                 ? (
                                     <>
-                                        <div style={{textAlign:'center',color:'#B91212'}}>Yours</div>
-                                        <div style={{color:'#B91212'}}>
+                                        <div style={{textAlign:'center',color:q.status=='wrong'?'var(--dengar)':'var(--gray)'}}>Yours</div>
+                                        <div style={{color:q.status=='wrong'?'var(--dengar)':'var(--gray)'}}>
                                             {q.userAnswer}
                                         </div>
                                     </>
