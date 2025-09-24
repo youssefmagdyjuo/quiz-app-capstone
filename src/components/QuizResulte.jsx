@@ -7,9 +7,9 @@ export default function QuizResulte() {
     const percentage =score/questions.length*100
     let statusStyle;
     if(percentage>=50){
-        statusStyle ='success'
+        statusStyle ='coloredText1'
     }else{
-        statusStyle ='faild'
+        statusStyle ='coloredText2'
     }
     return (
         <div className='QuizResulte_container'>

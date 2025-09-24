@@ -40,7 +40,6 @@ export default function Form({isVisible}) {
         }
         
 
-
     return (
         <div className={styles}
         onClick={(e) => {
@@ -49,9 +48,9 @@ export default function Form({isVisible}) {
                 toggleVisible();
                 }}}
         >
-            <div className='form_container'>
+            <div className='form_container colored_box'>
             <div className='form' action="">
-                <h1>Quiz type</h1>
+                <h1 className='coloredText1'>Quiz type</h1>
                 <Select options={categories} title="Category"/>
                 <Select options={difficultyLevels} title="Difficulty"/>
                 <Link to='/quiz'>

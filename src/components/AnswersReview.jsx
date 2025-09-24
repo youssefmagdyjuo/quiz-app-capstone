@@ -4,7 +4,7 @@ export default function AnswersReview() {
     const {questions} = useQuestionStore()
     return (
         <>
-        <h1 style={{textAlign:'center',fontSize:'2rem',margin:'2rem'}}>Review your Answers</h1>
+        <h1 style={{textAlign:'center',fontSize:'1.8rem',margin:'2rem'}}>Review your Answers</h1>
         <div className='AnswersReview_container'>
             {
                 questions.map(q=>(
