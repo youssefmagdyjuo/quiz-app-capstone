@@ -7,9 +7,9 @@ export const useOpenForm = create(
         (set) => ({
     isVisible: false,
     toggleVisible: () => set((state) => ({ isVisible: !state.isVisible })),
-    category: null,
+    category: 18,
     setCategory: (newCategory) => set(() => ({ category: newCategory })),
-    difficulty: null,
+    difficulty: 'medium',
     setDifficulty: (newDifficulty) => set(() => ({ difficulty: newDifficulty })),
 }),        { name: "form-storage" }
     )
