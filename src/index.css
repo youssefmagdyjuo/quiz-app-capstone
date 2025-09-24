@@ -426,6 +426,7 @@ body {
     }
     .AnswersReview_container{
         grid-template-columns: 1fr;
+        width: 95%;
     }
 }
 @media (max-width: 600px) {
@@ -467,7 +468,7 @@ body {
     font-size: 3rem;
 }
 .QuizResulte_container .userResulteStatus p{
-    font-size: 0.8rem;
+    font-size: 0.7rem;
 }
 .QuizResulte_container .scoreStatus_container .scoreStatus{
     width: 6rem;
