@@ -2,8 +2,7 @@
 @tailwind components;
 @tailwind utilities;
 @import "tailwindcss";
-@import url('https://fonts.googleapis.com/css2?family=Italianno&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Italianno&family=Noto+Serif+Thai:wght@100..900&display=swap');
 :root {
     --primary-color: #1E9D75;
     --secondary-color: #B4FF63;
@@ -16,7 +15,10 @@
 }
 
 body {
-    font-family: 'Poppins' sans-serif;
+    
+    font-family: "Noto Serif Thai", serif;
+    font-optical-sizing: auto;
+    font-variation-settings:100;
     background-color: var(--background-color);
     color: #FFFFFF;
 }
@@ -132,7 +134,7 @@ body {
 
 .headerContainer p {
     color: #AAA;
-    max-width: 30rem;
+    max-width: 25rem;
     margin-bottom: 1rem;
 }
 
@@ -422,7 +424,7 @@ body {
         font-size: 1.8rem;
     }
     .headerContainer p {
-        max-width: 23rem;
+        max-width: 22rem;
     }
     .AnswersReview_container{
         grid-template-columns: 1fr;
@@ -442,7 +444,7 @@ body {
         font-size: 1.5rem;
     }
     .headerContainer p {
-        max-width: 21rem;
+        max-width: 20rem;
     }
     .navBar_container {
         max-width: 100%;

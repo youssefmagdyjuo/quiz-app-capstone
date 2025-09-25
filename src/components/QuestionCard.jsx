@@ -2,14 +2,16 @@ import React from 'react'
 import Button from './Button'
 import { useQuestionStore } from '../store/Q_Store'
 import { Link } from 'react-router-dom';
+import Loader from './Loader';
 export default function QuestionCard() {
     const {score,decrementScore,incrementScore,updateQuestionStatus,incrementIndex,decrementIndex,getCurrentQuestion,currentQuestionIndex,setCurrentQuestionIndex,questions} = useQuestionStore();
     if (!getCurrentQuestion()) {
-        return <div>Loading...</div>;
+        return (
+            <Loader/>
+        ) 
+            
     }
-    const options = [...getCurrentQuestion().incorrect_answers, getCurrentQuestion().correct_answer];
-    //shuffle options
-    // options.sort(() => Math.random() - 0.5);
+    const options =getCurrentQuestion().options
     // handle option style on click
     function handelClickOption(event,userAnswer){
         if(getCurrentQuestion().status=='unanswered'){

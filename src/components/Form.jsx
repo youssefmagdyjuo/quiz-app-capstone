@@ -26,7 +26,9 @@ export default function Form({isVisible}) {
                 const formattedQuestions = data.results.map((question) => ({
                     ...question,
                     status: 'unanswered',
-                    userAnswer: 'No Answer'
+                    userAnswer: 'No Answer',
+                    //shuffle options
+                    options:[...question.incorrect_answers,question.correct_answer].sort(() => Math.random() - 0.5)
                 }));
                 // Update the store with the formatted questions
                 setQuestions(formattedQuestions);
