@@ -23,8 +23,8 @@ export default function AnswersReview() {
                                 q.status!='correct'
                                 ? (
                                     <>
-                                        <div style={{textAlign:'center',color:q.status=='wrong'?'var(--dengar)':'var(--gray)'}}>Yours</div>
-                                        <div style={{color:q.status=='wrong'?'var(--dengar)':'var(--gray)'}}>
+                                        <div style={{textAlign:'center',color:q.status=='wrong'?'var(--dengar)':'#666'}}>Yours : </div>
+                                        <div style={{color:q.status=='wrong'?'var(--dengar)':'#555'}}>
                                             {q.userAnswer}
                                         </div>
                                     </>

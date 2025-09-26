@@ -6,12 +6,20 @@
 :root {
     --primary-color: #1E9D75;
     --secondary-color: #B4FF63;
-    --background-color: #1b1b1b;
+    --background-color: #1f1f1f;
     --dengar:#9D1E1E;
     --mix-bg1:linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     --mix-bg2:linear-gradient(90deg, var(--dengar) 0%, var(--secondary-color) 100%);
     --gray:#444;
-    --text-color: #FFFFFF;
+    --Ligthgray:#a5a5a5;
+    --text-color: #F1F3E9;
+}
+.ligthMode{
+    --background-color: #F1F3E9;
+    --text-color: #1b1b1b;
+    --gray:#dbdbdb;
+    --secondary-color: #98e04c;
+    --mix-bg1:linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
 }
 
 body {
@@ -20,7 +28,8 @@ body {
     font-optical-sizing: auto;
     font-variation-settings:100;
     background-color: var(--background-color);
-    color: #FFFFFF;
+    color: var(--text-color);
+    transition: all 0.3s ease-in-out;
 }
 
 * {
@@ -49,6 +58,16 @@ body {
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
+.toggle {
+    background: var(--mix-bg1);
+    width: 3rem;
+    height: 3rem;
+    border-radius: 50%;
+    position: absolute;
+    top: -0.15rem;
+    transition: transform 0.3s ease-in-out;
+}
+
 .navBar_container {
     border-radius: 10rem;
     margin: 0 auto;
@@ -63,10 +82,11 @@ body {
     width: 9rem;
     height: 3rem;
     border-radius: 10rem;
+    padding: 0.15rem;
     
 }
 .btnNav{
-    background: var(--gray);
+    background: #444;
     border: none;
     color: white;
     font-size: 1rem;
@@ -79,21 +99,31 @@ body {
 }
 .button {
     border-radius: 10rem;
-    color: white;
-    width: 97%;
-    height: 91%;
+    color: var(--text-color);
+    width: 100%;
+    height: 100%;
     padding: 10px 20px;
     font-weight: 600;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     border-radius: 10rem;
     cursor: pointer;
+    position: relative;
     
 }
 
 .primaryButton {
     background: transparent;
+    color: #dbdcce;
 }
 
+.secondaryButton {
+    background: var(--gray);
+    /* transition: all .3s ease-in; */
+}
+.LigthButton {
+    background: var(--Ligthgray);
+    /* transition: all .3s ease-in; */
+}
 /* ================= NavBar component ================ */
 
 .navBar {
@@ -105,9 +135,7 @@ body {
     height: 91%;
     background-color: var(--background-color);
     padding: 0 0 0 2rem;
-}
-.secondaryButton {
-    background: var(--gray);
+    transition: all 0.3s ease-in-out;
 }
 
 .headerContainer {
@@ -151,7 +179,7 @@ body {
     border: 2px solid transparent;
     background: var(--mix-bg1);    
     cursor: pointer;
-    transition: opacity 0.3s ease;
+    /* transition: opacity 0.3s ease; */
 }
 
 .dropbtn:hover {
@@ -173,7 +201,7 @@ body {
     top: 110%;
     left: 0;
     width: 100%;
-    background: #222;
+    background: var(--background-color);
     border-radius: 15px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     z-index: 10;
@@ -261,7 +289,7 @@ body {
     place-content: center;
     text-align: center;
     font-weight: 600;
-    color: #ddd;
+    color: var(--text-color);
     background-color: var(--background-color);
     width: 100%;
     padding: 1.5rem;
@@ -273,7 +301,6 @@ body {
     justify-content: center;
     align-items: center;
     gap: 1rem;
-    /* background-color: blueviolet; */
     width: 80%;
 }
 .optionsContainer .option{
@@ -287,17 +314,17 @@ body {
     padding: 0.5rem 0.8rem;
     border-radius: 1rem;
     cursor: pointer;
-    transition: all 0.3s ease;
-    border: 1px solid var(--gray);
+    border: 1px solid #444;
 }
 .optionsContainer .option span{
-    background-color: var(--gray);
+    background-color: #444;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    color: #F1F3E9;
 } 
 .moveBar{
     display: flex;
@@ -326,6 +353,7 @@ body {
     justify-content: center;
     align-items: center;
     font-weight: 600;
+    
 }
 .moveButtons{
     display: flex;
@@ -354,7 +382,7 @@ body {
     place-content: center;
     text-align: start;
     font-weight: 600;
-    color: #ddd;
+    color: var(--text-color);
     background-color: var(--background-color);
     width: 100%;
     padding: 1rem 1.5rem 1.5rem 0;
@@ -388,7 +416,7 @@ body {
 
 .QuizResulte_container .userResulteStatus p{
     font-size: 0.9rem;
-    color: #999;
+    color: #777;
     padding-bottom: 1rem;
 }
 .QuizResulte_container .scoreStatus_container{

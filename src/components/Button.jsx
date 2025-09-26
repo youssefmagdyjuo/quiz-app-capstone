@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Button({buttonStyle,buttonText,buttomFunc}) {
+export default function Button({buttonStyle,buttonText,buttomFunc,children}) {
     const styles = `button ${buttonStyle}`;
     return (
         <div className='buttonContainer colored_box'>
@@ -9,6 +9,7 @@ export default function Button({buttonStyle,buttonText,buttomFunc}) {
             onClick={buttomFunc}
             >
             {buttonText}
+            {children}
             </button>
         </div>
     )

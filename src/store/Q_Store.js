@@ -2,6 +2,15 @@ import { create } from "zustand";
 import { persist } from "zustand/middleware";
 
 // Form Store
+export const useMode = create(
+    persist(
+        (set)=>({
+            lightMode:false,
+            toggleLightMode:()=> set((state)=>({lightMode:!state.lightMode}))
+        })
+        , {name:'site-mode'}
+    )
+)
 export const useOpenForm = create(
     persist(
         (set) => ({

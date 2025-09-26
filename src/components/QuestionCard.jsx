@@ -65,7 +65,7 @@ export default function QuestionCard() {
                             >
                                 {index==0?'a':index==1?'b':index==2?'c':index==3?'d':''}
                             </span>
-                            <h3>{option}</h3>
+                            <h3 style={{color:'var(--text-color)'}}>{option}</h3>
                         </div>
                     ))
                 }
@@ -86,7 +86,7 @@ export default function QuestionCard() {
                 </div>
                 {/* Question Number  */}
                 <div className="questionNumber_Container">
-                    <div className='questionNumber'>{`${currentQuestionIndex+1}/${questions.length}`}</div>
+                    <div className='questionNumber '>{`${currentQuestionIndex+1}/${questions.length}`}</div>
                 </div>
                 <div className='moveButtons'>
                     {
@@ -96,7 +96,7 @@ export default function QuestionCard() {
                             <Link to={'/quiz/resulte'}>
                                 <Button 
                                 // buttomFunc={()=>{alert('finish')}} 
-                                buttonStyle='praimryButton' 
+                                buttonStyle='primaryButton' 
                                 buttonText='Finish'
                                 />
                             </Link>
@@ -105,7 +105,7 @@ export default function QuestionCard() {
                             <>
                                 <Button 
                                 buttomFunc={incrementIndex} 
-                                buttonStyle='praimryButton' 
+                                buttonStyle='primaryButton' 
                                 buttonText='Next >'
                                 />
                             </>
