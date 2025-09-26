@@ -72,23 +72,31 @@ export default function QuestionCard() {
             </div>
             {/* move bar */}
             <div className="moveBar">
-                <div className='moveButtons'>
+                {/* <div className='moveButtons'> */}
+                <div className="btn1">
                     <button 
                     onClick={()=>{
                     setCurrentQuestionIndex(0);
                 }}
                 className='btnNav'>{"<<"}</button>
-                <Button 
-                buttomFunc={decrementIndex} 
-                buttonStyle='secondaryButton' 
-                buttonText='< Previous'
-                />
                 </div>
-                {/* Question Number  */}
+                <div className="btn2">
+                    <Button 
+                    buttomFunc={decrementIndex} 
+                    buttonStyle='secondaryButton' 
+                    buttonText='< Previous'
+                    />
+                </div>
+                {/* </div> */}
+
+
+                {/* Question Number circle */}
                 <div className="questionNumber_Container">
                     <div className='questionNumber '>{`${currentQuestionIndex+1}/${questions.length}`}</div>
                 </div>
-                <div className='moveButtons'>
+
+                <div className="btn3">
+                {/* <div className='moveButtons'> */}
                     {
                         currentQuestionIndex==questions.length - 1
                         ?(
@@ -112,13 +120,15 @@ export default function QuestionCard() {
                         )
                     }
 
+                    </div>  
 
-                    <button 
+                    <div className="btn4">
+                        <button 
                     onClick={()=>{
                         setCurrentQuestionIndex(questions.length - 1);
                     }}
                     className='btnNav'>{">>"}</button>
-                </div>
+                    </div>
             </div>
         </div>
         </div>

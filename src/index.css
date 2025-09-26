@@ -16,10 +16,11 @@
 }
 .ligthMode{
     --background-color: #F1F3E9;
-    --text-color: #1b1b1b;
+    --text-color: #282828;
     --gray:#dbdbdb;
     --secondary-color: #98e04c;
     --mix-bg1:linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+    --mix-bg2:linear-gradient(90deg, var(--dengar) 0%, var(--secondary-color) 100%);
 }
 
 body {
@@ -68,15 +69,7 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-.navBar_container {
-    border-radius: 10rem;
-    margin: 0 auto;
-    max-width: 50rem;
-    width: 95%;
-    height: 3rem;
-    margin-bottom: 5rem;
-    padding: 0 0 0 0.2rem;
-}
+
 
 .buttonContainer {
     width: 9rem;
@@ -95,6 +88,8 @@ body {
     padding: 0.5rem 1rem;
     border-radius: 10rem;
     border: 1px solid ;
+    width: fit-content;
+
     
 }
 .button {
@@ -113,7 +108,7 @@ body {
 
 .primaryButton {
     background: transparent;
-    color: #dbdcce;
+    color: #F1F3E9;
 }
 
 .secondaryButton {
@@ -125,7 +120,15 @@ body {
     /* transition: all .3s ease-in; */
 }
 /* ================= NavBar component ================ */
-
+.navBar_container {
+    border-radius: 10rem;
+    margin: 0 auto;
+    max-width: 50rem;
+    width: 95%;
+    height: 3rem;
+    margin-bottom: 5rem;
+    padding: 0 0 0 0.2rem;
+}
 .navBar {
     border-radius: 10rem;
     display: flex;
@@ -332,22 +335,48 @@ body {
     align-items: center;
     gap: 1rem;
     width: 100%;
+    /* background-color: green; */
+}
+.moveBar .btn1{
+    /* background-color: red; */
+    grid-area: btn1;
+    
+}
+.moveBar .btn2{
+/* background-color: red; */
+grid-area: btn2;
+
+}
+.moveBar .btn3{
+    /* background-color: violet; */
+    grid-area: btn4;
+    place-items: end;
+
+}
+.moveBar .btn4{
+    /* background-color: rgb(14, 14, 211); */
+    grid-area: btn5;
+    display: flex;
+    place-content: end;
+
 }
 .moveBar .questionNumber_Container{
+    grid-area: btn3;
     background: var(--mix-bg1);    
-
     border-radius: 10rem;
     display: flex;
     justify-content: center;
     align-items: center;
     box-shadow: 0px 4px 10px rgba(228, 228, 228, 0.144);
-    padding: 0.2rem;
+    width: 4.5rem;
+    height: 4.5rem;
+    place-self: center;
 
 }
 .moveBar .questionNumber_Container .questionNumber{
+    width: 4rem;
+    height: 4rem;
     background-color: var(--gray);
-    width: 4.5rem;
-    height: 4.5rem;
     border-radius: 10rem;
     display: flex;
     justify-content: center;
@@ -355,11 +384,11 @@ body {
     font-weight: 600;
     
 }
-.moveButtons{
+/* .moveButtons{
     display: flex;
     justify-content: space-between;
     width: 100%;
-}
+} */
 /* ================Resulte page================= */
 /* ==AnswersReview== */
 .AnswersReview_container{
@@ -445,7 +474,7 @@ body {
 
 @media screen and (max-width: 800px) {
     .header_1 {
-        font-size: 3.6rem;
+        font-size: 3.5rem;
     }
     
     .header_2 {
@@ -465,7 +494,7 @@ body {
         width: 100%;
     }
     .header_1 {
-        font-size: 2.4rem;
+        font-size: 2.3rem;
     }
 
     .header_2 {
@@ -483,19 +512,30 @@ body {
         height: 90%;
         padding: 0 0 0 1rem;
     }
-
+    .form_container{
+        height: 22rem;
+    }
     .optionsContainer{
         width: 100%;
     }
-    .moveBar{
-    flex-direction: column;
+.moveBar{
+    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(3,1fr);
+    grid-template-areas: 
+    "btn2 btn4"
+    "btn3 btn3"
+    "btn1 btn5"
+    ;
     gap: 0rem;
+    width: 100%;
 }
 .QuizResulte_container{
     gap: 1rem;
 }
 .QuizResulte_container .userResulteStatus h1{
-    font-size: 3rem;
+    font-size: 2.8rem;
 }
 .QuizResulte_container .userResulteStatus p{
     font-size: 0.7rem;

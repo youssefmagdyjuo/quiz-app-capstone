@@ -3,12 +3,6 @@ import Button from './Button'
 import {useMode }from '../store/Q_Store' 
 export default function Toggle() {
     const {lightMode,toggleLightMode}= useMode()
-    if(lightMode){
-        document.querySelector('body').classList.add('ligthMode')
-    }
-    else{
-        document.querySelector('body').classList.remove('ligthMode')
-    }
     function handelClickToggle(){
         toggleLightMode()
     }

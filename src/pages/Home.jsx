@@ -14,7 +14,7 @@ export default function Home() {
             <h1 className="header_1 coloredText1">Chase the Challenge</h1>
             <div style={{background:'#999',margin:'0.5rem',borderRadius:'5rem' ,height:'2px',width:'80%',maxWidth:'30rem'}}></div>
             <p>Challenge yourself with fun and engaging quizzes that make learning exciting and rewarding  </p>
-            <Button buttomFunc={toggleVisible} buttonStyle='primaryButton' buttonText="Try Now"/>
+            <Button buttomFunc={toggleVisible} buttonStyle='primaryButton' buttonText="Get Started"/>
             <Form isVisible={isVisible}/>
         </div>
 </>

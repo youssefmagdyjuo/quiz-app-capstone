@@ -13,7 +13,7 @@ export default function Select({options,title}) {
             >
                 <span className="selected">
                     {selected}
-                    <span>▼</span>
+                    <span style={{color:'#1E9D75'}}>▼</span>
                 </span>
             </button>
             {isOpen && (
