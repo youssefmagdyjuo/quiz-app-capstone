@@ -231,8 +231,7 @@ body {
     backdrop-filter: blur(3px);
     position: absolute;
     top: -5rem;
-    /* display: none; */
-    scale: 0;
+    display: none;
     transition: all 0.3s ease-in;
 }
 
@@ -265,9 +264,7 @@ body {
 }
 
 .desplay {
-    /* display: flex; */
-    /* top: -5rem; */
-    scale: 1;
+    display: flex;
 }
 /* =====================QuestionCard============== */
 .uperTitle{
