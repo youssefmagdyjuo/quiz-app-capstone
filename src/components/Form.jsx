@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import Select from './select';
+import Select from './Select';
 import Button from './Button';
 import { useOpenForm } from '../store/Q_Store';
 import { Link } from 'react-router-dom';
