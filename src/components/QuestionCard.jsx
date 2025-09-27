@@ -15,7 +15,6 @@ export default function QuestionCard() {
     // handle option style on click
     function handelClickOption(event,userAnswer){
         if(getCurrentQuestion().status=='unanswered'){
-            console.log(getCurrentQuestion().status)
             if(userAnswer==getCurrentQuestion().correct_answer){
                 //update question date in store
                 updateQuestionStatus(currentQuestionIndex,'correct',userAnswer)
@@ -36,7 +35,6 @@ export default function QuestionCard() {
             }else updateQuestionStatus(currentQuestionIndex,'wrong',userAnswer)
         }
                     }
-                    console.log(score)
     return (
         <div>
         <p className='uperTitle'>
@@ -69,7 +67,10 @@ export default function QuestionCard() {
                             >
                                 {index==0?'a':index==1?'b':index==2?'c':index==3?'d':''}
                             </span>
-                            <h3 style={{color:'var(--text-color)'}}>{option}</h3>
+                            <h3 
+                            style={{color:'var(--text-color)'}}
+                            dangerouslySetInnerHTML={{__html:option}}
+                            />
                         </div>
                     ))
                 }

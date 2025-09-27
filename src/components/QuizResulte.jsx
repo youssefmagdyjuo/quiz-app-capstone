@@ -4,7 +4,7 @@ import Button from './Button'
 import { Link } from 'react-router-dom'
 export default function QuizResulte() {
     const {questions,score,resetQuestions} = useQuestionStore()
-    const percentage =score/questions.length*100
+    const percentage =Math.round(score/questions.length*100)
     let statusStyle;
     if(percentage>=50){
         statusStyle ='coloredText1'
