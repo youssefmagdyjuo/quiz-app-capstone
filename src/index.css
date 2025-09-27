@@ -8,7 +8,7 @@
 :root {
     --primary-color: #1E9D75;
     --secondary-color: #B4FF63;
-    --background-color: #1f1f1f;
+    --background-color: #181818;
     --dengar:#9D1E1E;
     --mix-bg1:linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     --mix-bg2:linear-gradient(90deg, var(--dengar) 0%, var(--secondary-color) 100%);
@@ -26,7 +26,6 @@
 }
 
 body {
-
     font-family: "Noto Serif Thai", serif;
     font-optical-sizing: auto;
     font-variation-settings:100;
@@ -69,6 +68,11 @@ body {
     position: absolute;
     top: -0.15rem;
     transition: transform 0.3s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+    color: var(--gray);
 }
 
 .buttonContainer {
@@ -112,11 +116,13 @@ body {
 
 .secondaryButton {
     background: var(--gray);
-    /* transition: all .3s ease-in; */
+}
+.toggle_bg {
+    background: var(--gray);
+    background-image: url('../bg-texture.png');
 }
 .LigthButton {
     background: var(--Ligthgray);
-    /* transition: all .3s ease-in; */
 }
 /* ================= NavBar component ================ */
 .navBar_container {
@@ -138,6 +144,7 @@ body {
     background-color: var(--background-color);
     padding: 0 0 0 2rem;
     transition: all 0.3s ease-in-out;
+        /* background-image: url('/public/bg-texture.png'); */
 }
 
 .headerContainer {
@@ -148,7 +155,6 @@ body {
     text-align: center;
     margin-top: 5rem;
     position: relative;
-
 }
 
 .header_2 {
