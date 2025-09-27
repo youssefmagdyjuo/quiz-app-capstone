@@ -6,7 +6,7 @@ export default function NavBar() {
         <div className="navBar_container colored_box">
                 <nav className="navBar">
                 {/* <h1>Quizify</h1> */}
-                <img style={{width:'9rem'}} src="/public/logogo.png" alt="" />
+                <img style={{width:'9rem'}} src="./logogo.png" alt="" />
                 <Toggle/>
             </nav>
         </div>
