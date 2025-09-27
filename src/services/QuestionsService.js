@@ -2,7 +2,7 @@ import axios from 'axios';
 const BaseURL = 'https://opentdb.com/api.php';
 
 export async function fetchQuestions(category, difficulty) {
-    const response = await axios.get(`${BaseURL}?amount=5&category=${category}&difficulty=${difficulty}&type=multiple`);
+    const response = await axios.get(`${BaseURL}?amount=30&category=${category}&difficulty=${difficulty}&type=multiple`);
     return response.data;
 }
 
