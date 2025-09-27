@@ -1,30 +1,32 @@
-# Quiz App Capstone 🎯
+# Quizify 🎯  
 
-A simple **Quiz Application** built with React and Tailwind CSS as part of the Frontend Capstone Project.  
-The app allows users to take quizzes on various topics, fetch questions from an external API, and display their score at the end.
-
----
-
-## 🚀 Features
-- Select quiz topics from a list.
-- Fetch quiz questions from the **Open Trivia Database API**.
-- Display questions one by one with multiple-choice answers.
-- Show the final score after completing the quiz.
-- Responsive UI with **Tailwind CSS**.
-- Deployed on **Netlify** or **Vercel**.
+A modern and interactive **Quiz Application** built with React and Tailwind CSS as part of the Frontend Capstone Project.  
+The app provides a smooth quiz-taking experience, fetching questions dynamically from an external API, and showcasing results in a clean and responsive UI.  
 
 ---
 
-## 🛠 Tech Stack
-- **React** (Frontend)
-- **Tailwind CSS** (Styling)
-- **Open Trivia Database API** (Quiz Questions)
-- **GitHub** (Version Control)
-- **Netlify / Vercel** (Deployment)
+## 🚀 Features  
+- Choose quiz topics from a predefined list.  
+- Fetch quiz questions dynamically from the **Open Trivia Database API**.  
+- Display questions one by one with multiple-choice answers.  
+- Track user progress throughout the quiz.  
+- Show the final score with a clean results screen.  
+- Fully responsive design with **Tailwind CSS**.  
+- Deployed on **Vercel** for live access.  
 
 ---
 
-## 📦 Installation & Setup
-1. Clone the repository:
+## 🛠 Tech Stack  
+- **React** → Frontend framework  
+- **Tailwind CSS** → Styling  
+- **Open Trivia Database API** → Quiz questions provider  
+- **GitHub** → Version control  
+- **Vercel** → Deployment  
+
+---
+
+## 📦 Installation & Setup  
+
+1. Clone the repository:  
    ```bash
    git clone https://github.com/youssefmagdyjuo/quiz-app-capstone.git
