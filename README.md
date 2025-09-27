@@ -30,14 +30,17 @@ The app provides a smooth quiz-taking experience, fetching questions dynamically
 ## ⚙️ Tools & Technologies  
 
 <p align="left">
+## ⚙️ Tools & Technologies  
+
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg" width="40" height="40" alt="HTML" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg" width="40" height="40" alt="CSS" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg" width="40" height="40" alt="JavaScript" />
   <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg" width="40" height="40" alt="React" />
-  <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/tailwindcss/tailwindcss-plain.svg" width="40" height="40" alt="Tailwind" />
+  <img src="https://www.vectorlogo.zone/logos/tailwindcss/tailwindcss-icon.svg" width="40" height="40" alt="TailwindCSS" />
   <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/vite/vite-original.svg" width="40" height="40" alt="Vite" />
   <img src="https://raw.githubusercontent.com/pmndrs/zustand/main/examples/demo/public/favicon.ico" width="40" height="40" alt="Zustand" />
-</p>  
+</p>
+
 
 ---
 
