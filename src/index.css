@@ -3,6 +3,8 @@
 @tailwind utilities;
 @import "tailwindcss";
 @import url('https://fonts.googleapis.com/css2?family=Italianno&family=Noto+Serif+Thai:wght@100..900&display=swap');
+@import "tw-animate-css";
+
 :root {
     --primary-color: #1E9D75;
     --secondary-color: #B4FF63;
@@ -24,7 +26,7 @@
 }
 
 body {
-    
+
     font-family: "Noto Serif Thai", serif;
     font-optical-sizing: auto;
     font-variation-settings:100;
@@ -69,14 +71,12 @@ body {
     transition: transform 0.3s ease-in-out;
 }
 
-
-
 .buttonContainer {
     width: 9rem;
     height: 3rem;
     border-radius: 10rem;
     padding: 0.15rem;
-    
+
 }
 .btnNav{
     background: #444;
@@ -90,7 +90,6 @@ body {
     border: 1px solid ;
     width: fit-content;
 
-    
 }
 .button {
     border-radius: 10rem;
@@ -103,7 +102,7 @@ body {
     border-radius: 10rem;
     cursor: pointer;
     position: relative;
-    
+
 }
 
 .primaryButton {
@@ -282,6 +281,7 @@ body {
 }
 
 .questionBox{
+    overflow: hidden;
     background: var(--mix-bg1);    
     width: 100%;
     padding: 2px;
@@ -295,8 +295,27 @@ body {
     color: var(--text-color);
     background-color: var(--background-color);
     width: 100%;
-    padding: 1.5rem;
+    padding: 1rem;
     border-radius: 1rem;
+    height: 7rem;
+    overflow-y: auto;
+}
+.questionText::-webkit-scrollbar {
+    width: 8px; 
+}
+
+.questionText::-webkit-scrollbar-track {
+    background: var(--Ligthgray); 
+    border-radius: 1rem;
+}
+
+.questionText::-webkit-scrollbar-thumb {
+    background: var(--secondary-color);
+    border-radius: 1rem;
+}
+
+.questionText::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color)
 }
 .optionsContainer{
     display: flex;
@@ -335,29 +354,29 @@ body {
     align-items: center;
     gap: 1rem;
     width: 100%;
-    /* background-color: green; */
 }
 .moveBar .btn1{
-    /* background-color: red; */
     grid-area: btn1;
-    
+    display: flex;
+    align-items: start;
+    height: 100%;
 }
 .moveBar .btn2{
-/* background-color: red; */
 grid-area: btn2;
 
 }
 .moveBar .btn3{
-    /* background-color: violet; */
     grid-area: btn4;
-    place-items: end;
+    display: flex;
+    place-content: end;
 
 }
 .moveBar .btn4{
-    /* background-color: rgb(14, 14, 211); */
     grid-area: btn5;
     display: flex;
-    place-content: end;
+    justify-content: end;
+    align-items: start;
+    height: 100%;
 
 }
 .moveBar .questionNumber_Container{
@@ -382,7 +401,7 @@ grid-area: btn2;
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    
+
 }
 /* .moveButtons{
     display: flex;
@@ -465,18 +484,17 @@ grid-area: btn2;
     justify-content: center;
     align-items: center;
     font-weight: 600;
-    
+
 }
 .QuizResulte_container .scoreStatus_container .scoreStatus h2{
     font-size: 2rem;
 }
 
-
 @media screen and (max-width: 800px) {
     .header_1 {
         font-size: 3.5rem;
     }
-    
+
     .header_2 {
         font-size: 1.8rem;
     }
@@ -494,7 +512,7 @@ grid-area: btn2;
         width: 100%;
     }
     .header_1 {
-        font-size: 2.3rem;
+        font-size: 2rem;
     }
 
     .header_2 {

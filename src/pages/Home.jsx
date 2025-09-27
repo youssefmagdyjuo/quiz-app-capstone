@@ -1,5 +1,4 @@
 import React from "react";
-// import Squares from "../Squares";
 import NavBar from "../components/NavBar";
 import Button from "../components/Button";
 import Form from "../components/Form";

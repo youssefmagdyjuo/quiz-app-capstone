@@ -45,8 +45,12 @@ export default function QuestionCard() {
         <div className="questionContainer container">
             {/* question */}
             <div className="questionBox">
-                <h2 className='questionText'>{getCurrentQuestion().question}</h2>
+            <h2
+            className="questionText"
+            dangerouslySetInnerHTML={{ __html: getCurrentQuestion().question }}
+            />
             </div>
+            
             {/* options */}
             <div className="optionsContainer">
                 {

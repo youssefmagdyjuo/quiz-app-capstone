@@ -5,7 +5,8 @@ export default function NavBar() {
     return (
         <div className="navBar_container colored_box">
                 <nav className="navBar">
-                <h1>Quizify</h1>
+                {/* <h1>Quizify</h1> */}
+                <img style={{width:'9rem'}} src="/public/logogo.png" alt="" />
                 <Toggle/>
             </nav>
         </div>
