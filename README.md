@@ -42,6 +42,10 @@ The app provides a smooth quiz-taking experience, fetching questions dynamically
 
 ---
 
+## 🌍 Live Demo
+👉 https://quizify-peach.vercel.app/
+---
+
 ## 📦 Installation & Setup  
 
 1. Clone the repository:  
