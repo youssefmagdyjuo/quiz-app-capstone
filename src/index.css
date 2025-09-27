@@ -8,7 +8,7 @@
 :root {
     --primary-color: #1E9D75;
     --secondary-color: #B4FF63;
-    --background-color: #181818;
+    --background-color: #1c1c1c;
     --dengar:#9D1E1E;
     --mix-bg1:linear-gradient(90deg, var(--primary-color) 0%, var(--secondary-color) 100%);
     --mix-bg2:linear-gradient(90deg, var(--dengar) 0%, var(--secondary-color) 100%);
