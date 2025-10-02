@@ -181,7 +181,7 @@ body {
     font-family: Arial, sans-serif;
 }
 
-.dropbtn {
+.dropbtn,.numberBtnContainer {
     width: 100%;
     border-radius: 50px;
     border: 2px solid transparent;
@@ -194,12 +194,14 @@ body {
     opacity: 0.7;
 }
 
-.dropbtn .selected {
+.dropbtn .selected ,.numberBtn {
     background: var(--background-color);
     border-radius: 50px;
     padding: 8px 16px;
     display: flex;
     justify-content: space-between;
+    width: 100%;
+    outline: none;
 }
 
 .dropdown-content {
@@ -495,7 +497,29 @@ grid-area: btn2;
 .QuizResulte_container .scoreStatus_container .scoreStatus h2{
     font-size: 2rem;
 }
-
+.historyContainer{
+    padding: 2rem;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+}
+.historyContainer .QuizContainer{
+    border-radius: 1rem;
+    padding: 0.2rem;
+}
+.historyContainer .QuizContainer .Quiz{
+    background-color: var(--background-color);
+    width: 100%;
+    border-radius: 1rem;
+    padding: 1rem;
+    
+}
+.historyContainer .QuizContainer .Quiz .QuizDetails{
+    width: 90%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 80% 20%;
+}
 @media screen and (max-width: 800px) {
     .header_1 {
         font-size: 3.5rem;
@@ -511,6 +535,9 @@ grid-area: btn2;
         grid-template-columns: 1fr;
         width: 95%;
     }
+    .historyContainer{
+    gap: 1rem;
+}
 }
 @media (max-width: 600px) {
     .container{
@@ -570,5 +597,9 @@ grid-area: btn2;
 }
 .QuizResulte_container .scoreStatus_container .scoreStatus h2{
     font-size: 1.5rem;
+}
+.historyContainer{
+    padding: 1rem;
+    grid-template-columns: 1fr;
 }
 }

@@ -3,7 +3,7 @@ import Select from './Select';
 import Button from './Button';
 import { useOpenForm } from '../store/Q_Store';
 import { Link } from 'react-router-dom';
-import { fetchQuestions ,fetchCategories,difficultyLevels} from '../services/QuestionsService'
+import { fetchQuestions ,fetchCategories,difficultyLevels,numbersOptions} from '../services/QuestionsService'
 import { useQuestionStore } from '../store/Q_Store'
 export default function Form({isVisible}) {
     const [categories,setCategories]=useState([]);
@@ -15,13 +15,13 @@ export default function Form({isVisible}) {
     loadCategories();
     }, []);
     const styles = `formContainerPage ${isVisible ? 'desplay' : ''}`;
-    const {toggleVisible,difficulty,category} = useOpenForm();
+    const {toggleVisible,difficulty,category,numberOfQuestions} = useOpenForm();
     const {setQuestions,resetScore} = useQuestionStore();
     // Fetch questions by fetchQuestions function from QuestionsService and set them in the store
         async function loadQuestions() {
             resetScore()
             try {
-                const data = await fetchQuestions(category,difficulty);
+                const data = await fetchQuestions(category,difficulty,numberOfQuestions);
                 // Add a status field to each question
                 const formattedQuestions = data.results.map((question) => ({
                     ...question,
@@ -55,6 +55,7 @@ export default function Form({isVisible}) {
                 <h1 className='coloredText1'>Quiz type</h1>
                 <Select options={categories} title="Category"/>
                 <Select options={difficultyLevels} title="Difficulty"/>
+                <Select options={numbersOptions} title="Numbers of questions"/>
                 <Link to='/quiz'>
                     <Button  
                     buttonStyle='primaryButton' 

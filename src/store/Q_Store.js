@@ -20,6 +20,8 @@ export const useOpenForm = create(
     setCategory: (newCategory) => set(() => ({ category: newCategory })),
     difficulty: 'medium',
     setDifficulty: (newDifficulty) => set(() => ({ difficulty: newDifficulty })),
+    numberOfQuestions:50,
+    setNumberOfQuestions: (new_numberOfQuestions) => set(() => ({ numberOfQuestions: new_numberOfQuestions })),
 }),        { name: "form-storage" }
     )
 );
@@ -28,6 +30,11 @@ export const useOpenForm = create(
 export const useQuestionStore = create(
     persist(
         (set, get) => ({
+            // all quizes 
+            quizzes:[],
+            resetQuizzes: () => set(() => ({ quizzes: [] })),
+            addQuiz: (newQuiz) =>
+            set((state) => ({ quizzes: [...state.quizzes, newQuiz] })),
             // questions
             questions: [],
             setQuestions: (newQuestions) =>

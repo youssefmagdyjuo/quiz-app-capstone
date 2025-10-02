@@ -1,8 +1,8 @@
 import axios from 'axios';
 const BaseURL = 'https://opentdb.com/api.php';
 
-export async function fetchQuestions(category, difficulty) {
-    const response = await axios.get(`${BaseURL}?amount=30&category=${category}&difficulty=${difficulty}&type=multiple`);
+export async function fetchQuestions(category, difficulty,numberOfQuestions) {
+    const response = await axios.get(`${BaseURL}?amount=${numberOfQuestions}&category=${category}&difficulty=${difficulty}&type=multiple`);
     return response.data;
 }
 
@@ -113,4 +113,11 @@ export const difficultyLevels = [
         { "id": 1, "name": "Easy" },
         { "id": 2, "name": "Medium" },
         { "id": 3, "name": "Hard" }
+    ];
+export const numbersOptions = [
+        { "id": 10, "name": 10 },
+        { "id": 20, "name": 20 },
+        { "id": 30, "name": 30 },
+        { "id": 40, "name": 40 },
+        { "id": 50, "name": 50 },
     ];

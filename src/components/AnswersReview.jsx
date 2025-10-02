@@ -1,7 +1,7 @@
 import React from 'react'
-import { useQuestionStore } from '../store/Q_Store'
-export default function AnswersReview() {
-    const {questions} = useQuestionStore()
+// import { useQuestionStore } from '../store/Q_Store'
+export default function AnswersReview({questions}) {
+    // const {questions} = useQuestionStore()
     return (
         <>
         <h1 style={{textAlign:'center',fontSize:'1.8rem',margin:'2rem'}}>Review your Answers</h1>

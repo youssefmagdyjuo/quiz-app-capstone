@@ -4,7 +4,7 @@ import { useOpenForm } from "../store/Q_Store";
 export default function Select({options,title}) {
     const [isOpen, setIsOpen] = useState(false);
     const [selected, setSelected] = useState(title);
-    const {setCategory,setDifficulty} = useOpenForm();
+    const {setCategory,setDifficulty,setNumberOfQuestions} = useOpenForm();
     return (
         <div className="dropdown">
             <button
@@ -26,6 +26,7 @@ export default function Select({options,title}) {
                                 // set the category or difficulty in the store for use in fetching questions
                                 if(title === "Category") setCategory(option.id);
                                 if(title === "Difficulty") setDifficulty(option.name.toLowerCase());
+                                if(title === "Numbers of questions") setNumberOfQuestions(option.name);
                                 setIsOpen(false);
                             }}
                         >

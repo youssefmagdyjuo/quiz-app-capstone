@@ -1,10 +1,12 @@
 import React from 'react'
 import Button from './Button'
 import { useQuestionStore } from '../store/Q_Store'
+import { useOpenForm } from '../store/Q_Store'
 import { Link } from 'react-router-dom';
 import Loader from './Loader';
 export default function QuestionCard() {
-    const {score,decrementScore,incrementScore,updateQuestionStatus,incrementIndex,decrementIndex,getCurrentQuestion,currentQuestionIndex,setCurrentQuestionIndex,questions} = useQuestionStore();
+    const {numberOfQuestions,difficulty,category} =useOpenForm();
+    const {resetQuizzes,addQuiz,score,decrementScore,incrementScore,updateQuestionStatus,incrementIndex,decrementIndex,getCurrentQuestion,currentQuestionIndex,setCurrentQuestionIndex,questions} = useQuestionStore();
     if (!getCurrentQuestion()) {
         return (
             <Loader/>
@@ -35,6 +37,17 @@ export default function QuestionCard() {
             }else updateQuestionStatus(currentQuestionIndex,'wrong',userAnswer)
         }
                     }
+    function handelFinish(){
+        const quiz ={
+            quizScore:score,
+            quizNumberOfQuestions:numberOfQuestions,
+            quizDetails:questions,
+            quizCategory:getCurrentQuestion().category,
+            quizDifficulty:difficulty,
+        }
+        addQuiz(quiz)
+        
+    }
     return (
         <div>
         <p className='uperTitle'>
@@ -108,7 +121,7 @@ export default function QuestionCard() {
                             <>
                             <Link to={'/quiz/resulte'}>
                                 <Button 
-                                // buttomFunc={()=>{alert('finish')}} 
+                                buttomFunc={handelFinish} 
                                 buttonStyle='primaryButton' 
                                 buttonText='Finish'
                                 />

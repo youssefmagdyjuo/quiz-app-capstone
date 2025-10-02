@@ -4,6 +4,8 @@ import Quiz from './pages/Quiz'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import ResultePage from './pages/ResultePage'
 import { useMode } from './store/Q_Store'
+import History from './pages/history'
+import QuizDetails from './pages/quizDetails'
 function App() {
 const {lightMode}=useMode()
     if(lightMode){
@@ -17,6 +19,8 @@ const {lightMode}=useMode()
     <Router>
       <Routes>
         <Route path='/' element={<Home/>}/>
+        <Route path='/history' element={<History/>}/>
+        <Route path='/history/quizDetails/:id' element={<QuizDetails/>}/>
         <Route path='/quiz' element={<Quiz/>}/>
         <Route path='/quiz/resulte' element={<ResultePage/>}/>
       </Routes>
