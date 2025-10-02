@@ -60,7 +60,7 @@ export default function History() {
                     <Link to='/'>
                         <Button buttonText='< Back' buttonStyle='secondaryButton' />
                     </Link>
-                    <Button buttonText='Clean History' buttonStyle='dangerButton' buttomFunc={()=>{quizzes&&quizzes.length>0? setPop(!pop):''}}/>
+                    <Button buttonText='Clean' buttonStyle='dangerButton' buttomFunc={()=>{quizzes&&quizzes.length>0? setPop(!pop):''}}/>
                 </div>
         </div>
     )
