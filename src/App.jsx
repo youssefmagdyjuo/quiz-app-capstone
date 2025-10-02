@@ -4,8 +4,8 @@ import Quiz from './pages/Quiz'
 import { BrowserRouter as Router, Route, Routes} from 'react-router-dom'
 import ResultePage from './pages/ResultePage'
 import { useMode } from './store/Q_Store'
-import History from './pages/history'
 import QuizDetails from './pages/quizDetails'
+import History from './pages/History'
 function App() {
 const {lightMode}=useMode()
     if(lightMode){
