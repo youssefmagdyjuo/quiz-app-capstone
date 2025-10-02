@@ -15,6 +15,7 @@
     --gray:#444;
     --Ligthgray:#a5a5a5;
     --text-color: #F1F3E9;
+
 }
 .ligthMode{
     --background-color: #F1F3E9;
@@ -123,6 +124,34 @@ body {
 }
 .LigthButton {
     background: var(--Ligthgray);
+}
+.dangerButton{
+    background: var(--dengar);
+    color: #F1F3E9;
+
+}
+.popContainer {
+    padding: 0.2rem;
+    width: 80%;
+    border-radius: 1rem;
+    position: absolute;
+    z-index: 88;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: none;
+}
+
+.pop{
+    background-color: var(--gray);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+    height: 12rem;
+    width: 100%;
+    border-radius: 1rem;
+    padding: 2rem;
 }
 /* ================= NavBar component ================ */
 .navBar_container {
