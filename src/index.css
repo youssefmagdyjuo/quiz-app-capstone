@@ -134,12 +134,13 @@ body {
     padding: 0.2rem;
     width: 80%;
     border-radius: 1rem;
-    position: absolute;
+    position: fixed;
     z-index: 88;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
+    box-shadow: 0 6px 20rem rgb(0, 0, 0);
 }
 
 .pop{
@@ -535,6 +536,8 @@ grid-area: btn2;
 .historyContainer .QuizContainer{
     border-radius: 1rem;
     padding: 0.2rem;
+    box-shadow: 0 6px 12px rgba(86, 86, 86, 0.3);
+
 }
 .historyContainer .QuizContainer .Quiz{
     background-color: var(--background-color);
