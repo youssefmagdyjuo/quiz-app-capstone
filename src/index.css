@@ -140,7 +140,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%);
     display: none;
-    box-shadow: 0 6px 20rem rgb(0, 0, 0);
+    box-shadow: 0 6px 20rem rgba(32, 32, 32, 0.781);
 }
 
 .pop{

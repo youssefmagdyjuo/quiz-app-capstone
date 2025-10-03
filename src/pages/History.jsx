@@ -23,7 +23,7 @@ export default function History() {
                             <div
                                 key={index}
                                 className="QuizContainer"
-                                style={{ background: quiz.quizScore/quiz.quizNumberOfQuestions*100 > 50 ? "var(--mix-bg1)" : "var(--mix-bg2)" }}
+                                style={{ background: quiz.quizScore/quiz.quizNumberOfQuestions*100 >= 50 ? "var(--mix-bg1)" : "var(--mix-bg2)" }}
                             >
                                 <div className="Quiz">
                                     <h2 className="text-center mb-4 text-xl">{quiz.quizCategory}</h2>
@@ -34,7 +34,7 @@ export default function History() {
                                         <div>{quiz.quizDifficulty}</div>
                                         <p>Score</p>
                                         <div
-                                            className={quiz.quizScore/quiz.quizNumberOfQuestions*100 > 50 ? "coloredText1" : "coloredText2"}
+                                            className={quiz.quizScore/quiz.quizNumberOfQuestions*100 >= 50 ? "coloredText1" : "coloredText2"}
                                         >
                                             {`${Math.round((quiz.quizScore / quiz.quizNumberOfQuestions) * 100)}%`}
                                         </div>
