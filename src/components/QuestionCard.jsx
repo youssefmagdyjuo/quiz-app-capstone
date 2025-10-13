@@ -50,9 +50,7 @@ export default function QuestionCard() {
     }
     return (
         <div>
-        <p className='uperTitle'>
-            {`${getCurrentQuestion().category} || ${getCurrentQuestion().difficulty}`}
-        </p>
+        <p className='uperTitle'dangerouslySetInnerHTML={{__html:`${getCurrentQuestion().category} || ${getCurrentQuestion().difficulty}`}}/>
         <div className="questionContainer container">
             {/* question */}
             <div className="questionBox">

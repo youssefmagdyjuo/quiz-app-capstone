@@ -74,10 +74,9 @@ export default function History() {
                                         }}
                                     >
                                         <div className="Quiz">
-                                            <h2 className="text-center mb-4 text-xl">
-                                                {quiz.quizCategory}
-                                            </h2>
-
+                                            <h2 
+                                            dangerouslySetInnerHTML={{__html:quiz.quizCategory}}
+                                            className="text-center mb-4 text-xl"/>
                                             <div className="QuizDetails">
                                                 <p>Number of questions</p>
                                                 <div>{quiz.quizNumberOfQuestions}</div>
