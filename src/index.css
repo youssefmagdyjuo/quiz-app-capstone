@@ -497,7 +497,7 @@ grid-area: btn2;
 .QuizResulte_container .userResulteStatus h1{
     font-size: 4rem;
     font-weight: 600;
-
+    
 }
 
 .QuizResulte_container .userResulteStatus p{
@@ -522,11 +522,12 @@ grid-area: btn2;
     justify-content: center;
     align-items: center;
     font-weight: 600;
-
+    
 }
 .QuizResulte_container .scoreStatus_container .scoreStatus h2{
     font-size: 2rem;
 }
+/* ================History page================= */
 .historyContainer{
     padding: 2rem;
     display: grid;
@@ -537,7 +538,7 @@ grid-area: btn2;
     border-radius: 1rem;
     padding: 0.2rem;
     box-shadow: 0 6px 12px rgba(86, 86, 86, 0.3);
-
+    
 }
 .historyContainer .QuizContainer .Quiz{
     background-color: var(--background-color);
@@ -551,6 +552,39 @@ grid-area: btn2;
     margin: 0 auto;
     display: grid;
     grid-template-columns: 80% 20%;
+}
+/*search bar*/
+.searchContainer{
+    gap: 0.1rem;
+    display: flex;
+    width: 100%;
+    padding:1rem 2rem;
+    max-width: 40rem;
+}
+.buttonSearch{
+    transition: all 1s ease;
+    background: var(--mix-bg1);
+    border-radius: 50%;
+    width: 2.5rem;
+    height: 2.5rem;
+    padding: 0.5rem;cursor: pointer;
+    color: var(--background-color);
+}
+.changeButtonSearchStyle{
+    border-radius: 5% 50% 50% 5%;
+}
+.inputSearch{
+    background-color: var(--gray);
+    border-radius:  2rem 0.2rem 0.2rem 2rem ;
+    height: 2.5rem;
+    outline: none;
+    transition: all 0.4s ;
+    width: 0rem;
+}
+.display{
+    padding: 1rem;
+    flex: 1;
+    
 }
 @media screen and (max-width: 800px) {
     .header_1 {
