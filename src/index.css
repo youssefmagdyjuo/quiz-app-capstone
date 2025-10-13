@@ -120,7 +120,7 @@ body {
 }
 .toggle_bg {
     background: var(--gray);
-    background-image: url('../bg-texture.png');
+    /* background-image: url('../bg-texture.png'); */
 }
 .LigthButton {
     background: var(--Ligthgray);
